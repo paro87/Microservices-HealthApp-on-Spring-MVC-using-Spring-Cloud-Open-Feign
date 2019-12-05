@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Service
 public class DepartmentService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DepartmentService.class);
     private PatientClient patientClient;
     private DepartmentRepository departmentRepository;
 
