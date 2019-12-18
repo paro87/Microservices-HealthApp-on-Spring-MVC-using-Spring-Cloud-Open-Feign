@@ -48,15 +48,15 @@ public class PatientService {
     }
 
     public Patient getById(Long patientId) {
+        //Patient patientFound=patientRepository.findById(patientId).orElse(null);
         Patient patientFound=patientRepository.findById(patientId).orElse(null);
         LOGGER.info("Patient found with id={}", patientId);
         return patientFound;
     }
 
     public Patient add(Patient patient) {
-        patientRepository.save(patient);
+        Patient patientSaved=patientRepository.save(patient);
         LOGGER.info("Patient added with id={}", patient.getId());
-        Patient patientSaved= patientRepository.findById(patient.getId()).orElse(null);
         return patientSaved;
     }
 

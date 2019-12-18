@@ -33,11 +33,12 @@ class PatientControllerTest {
     private Patient patient1;
     private Patient patient2;
     private List<Patient> patientList;
+    private
 
     @BeforeEach
     void setUp() {
         patient1=new Patient(1L, "John", "Adams", 2L, 23L);
-        patient2=new Patient(2L, "Mary", "James", 1L, 7L);
+        patient2=new Patient(2L, "Mary", "James", 2L, 23L);
         patientList= new ArrayList<>();
         patientList.add(patient1);
         patientList.add(patient2);

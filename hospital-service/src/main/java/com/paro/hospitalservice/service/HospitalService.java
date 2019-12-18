@@ -40,9 +40,8 @@ public class HospitalService {
     }
 
     public Hospital add( Hospital hospital){
-        hospitalRepository.save(hospital);
+        Hospital hospitalSaved = hospitalRepository.save(hospital);
         LOGGER.info("Hospital added with id={}", hospital.getId());
-        Hospital hospitalSaved=hospitalRepository.findById(hospital.getId()).orElse(null);
         return hospitalSaved;
     }
 

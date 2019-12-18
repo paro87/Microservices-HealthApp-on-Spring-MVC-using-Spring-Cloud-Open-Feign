@@ -8,6 +8,7 @@ import java.util.List;
 
 
 @RestController
+@RequestMapping("/v1")     //For Swagger UI: http://localhost:8090/swagger-ui.html
 public class HospitalController {
 
     private HospitalService hospitalService;

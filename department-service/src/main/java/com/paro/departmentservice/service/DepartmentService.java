@@ -39,9 +39,8 @@ public class DepartmentService {
     }
 
     public Department add(Department department){
-        departmentRepository.save(department);
+        Department departmentSaved=departmentRepository.save(department);
         LOGGER.info("Department added with id={}", department.getId());
-        Department departmentSaved=departmentRepository.findById(department.getId()).orElse(null);
         return departmentSaved;
     }
 
