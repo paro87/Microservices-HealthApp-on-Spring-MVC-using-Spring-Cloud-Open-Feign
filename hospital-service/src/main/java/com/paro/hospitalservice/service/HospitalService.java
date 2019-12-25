@@ -1,9 +1,7 @@
 package com.paro.hospitalservice.service;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.paro.hospitalservice.client.DepartmentClient;
 import com.paro.hospitalservice.client.PatientClient;
-import com.paro.hospitalservice.controller.HospitalController;
 import com.paro.hospitalservice.model.Hospital;
 import com.paro.hospitalservice.repository.HospitalRepository;
 import org.slf4j.Logger;

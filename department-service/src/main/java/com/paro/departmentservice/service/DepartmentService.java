@@ -17,7 +17,7 @@ import java.util.Optional;
 public class DepartmentService {
     private static final Logger LOGGER = LoggerFactory.getLogger(DepartmentService.class);
     private PatientClient patientClient;
-    private DepartmentRepository departmentRepository;
+    private final DepartmentRepository departmentRepository;
 
     @Autowired
     public DepartmentService (DepartmentRepository departmentRepository, PatientClient patientClient) {

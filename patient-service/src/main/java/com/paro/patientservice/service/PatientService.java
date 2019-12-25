@@ -28,7 +28,7 @@ public class PatientService {
     }
     */
     //Constructor Injection (1) - The Good
-    private PatientRepository patientRepository;
+    private final PatientRepository patientRepository;
     @Autowired
     public PatientService(PatientRepository patientRepository){
         this.patientRepository=patientRepository;
