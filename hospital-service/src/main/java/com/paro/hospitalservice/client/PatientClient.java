@@ -11,7 +11,7 @@ import java.util.List;
 //@FeignClient(name = "patient-service", fallback = PatientClientFallback.class)
 @FeignClient(name = "patient-service", fallbackFactory = PatientClientFallbackFactory.class)
 public interface PatientClient {
-    @GetMapping("/hospital/{hospitalId}")
+    @GetMapping("/service/hospital/{hospitalId}")
     List<Patient> findByHospital(@PathVariable("hospitalId") Long hospitalId);
 
 }

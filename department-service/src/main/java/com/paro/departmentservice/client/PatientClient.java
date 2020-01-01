@@ -12,7 +12,7 @@ import java.util.List;
 //@FeignClient(name = "patient-service", fallback = PatientClientFallback.class)
 @FeignClient(name = "patient-service", fallbackFactory = PatientClientFallbackFactory.class)
 public interface PatientClient {
-    @GetMapping("/department/{departmentId}")
+    @GetMapping("/service/department/{departmentId}")
     List<Patient> findByDepartment(@PathVariable("departmentId") Long departmentId);
 
 }

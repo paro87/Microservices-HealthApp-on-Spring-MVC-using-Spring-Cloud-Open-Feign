@@ -11,11 +11,11 @@ import java.util.List;
 //@FeignClient(name = "department-service", fallback = DepartmentClientFallback.class)
 @FeignClient(name = "department-service", fallbackFactory = DepartmentClientFallbackFactory.class)
 public interface DepartmentClient {
-    @GetMapping(value = "/hospital/{hospitalId}")
-    public List<Department> findByHospital(@PathVariable("hospitalId") Long hospitalId);
+    @GetMapping(value = "/service/hospital/{hospitalId}")
+    List<Department> findByHospital(@PathVariable("hospitalId") Long hospitalId);
 
-    @GetMapping(value = "/hospital/{hospitalId}/with-patients")
-    public List<Department> findByHospitalWithPatients(@PathVariable("hospitalId") Long hospitalId);
+    @GetMapping(value = "/service/hospital/{hospitalId}/with-patients")
+    List<Department> findByHospitalWithPatients(@PathVariable("hospitalId") Long hospitalId);
 
 
 }
