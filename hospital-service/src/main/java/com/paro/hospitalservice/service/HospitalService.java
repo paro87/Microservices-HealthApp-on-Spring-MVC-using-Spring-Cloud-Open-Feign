@@ -18,11 +18,11 @@ import java.util.Optional;
 public class HospitalService {
     private static final Logger LOGGER= LoggerFactory.getLogger(HospitalService.class);
 
-    private HospitalRepository hospitalRepository;
-    private DepartmentClient departmentClient;
-    private PatientClient patientClient;
+    private final HospitalRepository hospitalRepository;
+    private final DepartmentClient departmentClient;
+    private final PatientClient patientClient;
     @Autowired
-    public void HospitalService (HospitalRepository hospitalRepository, DepartmentClient departmentClient, PatientClient patientClient){
+    public HospitalService (HospitalRepository hospitalRepository, DepartmentClient departmentClient, PatientClient patientClient){
         this.hospitalRepository=hospitalRepository;
         this.departmentClient=departmentClient;
         this.patientClient=patientClient;
